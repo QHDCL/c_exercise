@@ -24,17 +24,31 @@ void TestSListBack(){
 	printf("≤È’“Ω·µ„:%d\n", SListFind(&p, 10));
 
 }
+
 void TestSListFront(){
 	SListNode* p;
 	SListInit(&p);
+	SListPushFront(&p, 3);
 	SListPushFront(&p, 1);
+	SListPushFront(&p, 3);
 	SListPushFront(&p, 2);
 	SListPushFront(&p, 3);
+	SListPushFront(&p, 3);
+	SListPushFront(&p, 3);
 	SListPushFront(&p, 4);
+	SListPrint(p);
 
 	/*SListPopFront(&p);
 	SListPrint(p);*/
 
+	/*SListRemove(&p, 4);
+	SListPrint(p);*/
+
+	//SListRemoveAll(&p, 3);
+	//SListPrint(p);
+
+	SlistBubbleSort(&p);
+	SListPrint(p);
 }
 
 
@@ -55,15 +69,30 @@ void TestSList(){
 	SListPrint(p);
 }
 
+TestSListDestroy(){
+	SListNode* p;
+	SListInit(&p);
+	SListPushBack(&p, 1);
+	SListPushBack(&p, 2);
+	SListPushBack(&p, 3);
+	SListPushBack(&p, 4);
+	SListPushBack(&p, 5);
+	SListPrint(p);
+
+	SListDestroy(&p);
+}
+
 
 
 int main(){
 
-	TestSListBack();
+	//TestSListBack();
 	
-	//TestSListFront();
+	TestSListFront();
 
 	//TestSList();
+
+	//TestSListDestroy();
 
 	system("pause");
 	return 0;

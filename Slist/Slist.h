@@ -59,12 +59,12 @@ SLDataType Front(SListNode* pHead);
 //末节点
 SLDataType Back(SListNode* pHead);
 
-//删除指定节点
-void SListRemove(SListNode* pHead, SLDataType data);
+//删除第一个值为data的结点
+void SListRemove(SListNode** pHead, SLDataType data);
 
-//删除指定的所有节点
-void SListRemoveAll(SListNode* pHead, SLDataType data);
+//删除值为data的所有节点
+void SListRemoveAll(SListNode** pHead, SLDataType data);
 
 //冒泡排序
-void SlistBubbleSort(SListNode* pHead);
+void SlistBubbleSort(SListNode** pHead);
 
