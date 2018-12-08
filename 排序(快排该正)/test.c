@@ -21,7 +21,7 @@ int main(){
 
 	//QuickSort(array, 0, size);
 
-	QuickSortNor(array, size);//-----´íÎó
+	QuickSortNor(array, size);
 	
 	//MergeSort(array,size);
 

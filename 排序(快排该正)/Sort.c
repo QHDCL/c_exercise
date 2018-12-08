@@ -271,7 +271,7 @@ void QuickSort(int *array, int left, int right){
 	
 }
 
-//快速排序(非递归)//-----有错
+//快速排序(非递归)
 void QuickSortNor(int *array, int size){
 	Stack s;
 	StackInin(&s);
@@ -283,7 +283,7 @@ void QuickSortNor(int *array, int size){
 		int right=StackTop(&s);
 		StackPop(&s);
 		if(right-left>1){
-			int div=Pation2(array,left,right);
+			int div=Pation1(array,left,right);
 			StackPush(&s,right);
 			StackPush(&s,div+1);
 			StackPush(&s,div);
@@ -342,9 +342,7 @@ void MergeSort(int *array,  int size){
 //归并排序(非递归)
 void MergeSortNor(int *array, int size){
 	int *temp = (int*)malloc(size*sizeof(array[0]));
-
 	assert(temp);
-	
 	int gap = 1;
 	while (gap < size){
 		for (int i = 0; i < size; i += 2 * gap){
